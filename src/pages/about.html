@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — NEXORA</title>
+  <meta name="description" content="How NEXORA started, who runs it, and what the program has done since 2021." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#111827',
+            charcoal: '#1A1F2E',
+            plum: '#231B30',
+            gold: '#D9A253',
+            bone: '#F2EEE6',
+            mist: '#98A0B3',
+            line: '#2B3040',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['"IBM Plex Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css" rel="stylesheet" />
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-ink text-bone font-sans antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-40 bg-ink/90 backdrop-blur border-b border-line">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 sm:px-6 py-4">
+      <a href="../../index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-full bg-gold text-ink font-display font-semibold flex items-center justify-center">N</span>
+        <span class="font-display text-xl tracking-tight text-bone">NEXORA</span>
+      </a>
+
+      <div class="flex md:order-2 items-center gap-2">
+        <a href="signin.html" data-nav-link="signin.html" class="hidden sm:inline-block text-sm text-bone/80 hover:text-gold px-3 py-2">Sign In</a>
+        <a href="signup.html" data-nav-link="signup.html" class="text-sm font-medium bg-gold text-ink px-4 py-2 rounded-md hover:bg-gold/90 transition-colors">Sign Up</a>
+        <button data-collapse-toggle="navbar-main" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-bone/80 rounded-md md:hidden hover:bg-charcoal" aria-controls="navbar-main" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-main">
+        <ul class="flex flex-col md:flex-row md:items-center md:gap-8 mt-4 md:mt-0 font-medium">
+          <li><a href="../../index.html" data-nav-link="index.html" class="block py-2 text-bone/80 hover:text-gold">Home</a></li>
+          <li><a href="about.html" data-nav-link="about.html" class="block py-2 text-gold">About</a></li>
+          <li><a href="contact.html" data-nav-link="contact.html" class="block py-2 text-bone/80 hover:text-gold">Contact</a></li>
+          <li class="sm:hidden"><a href="signin.html" class="block py-2 text-bone/80 hover:text-gold">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HEADER / BREADCRUMB ================= -->
+  <header class="border-b border-line bg-charcoal">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 pt-12 pb-14">
+      <nav class="flex text-sm text-mist mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2">
+          <li><a href="../../index.html" class="hover:text-gold">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-bone" aria-current="page">About</li>
+        </ol>
+      </nav>
+      <h1 class="font-display text-4xl md:text-5xl text-bone">Three engineers, one recurring conversation</h1>
+      <p class="text-mist mt-4 max-w-2xl leading-relaxed">NEXORA grew out of a weekend study group into a full mentorship program. Here's the short version of how that happened, and who's still running it.</p>
+    </div>
+  </header>
+
+  <!-- ================= TIMELINE ================= -->
+  <section class="max-w-screen-xl mx-auto px-4 sm:px-6 py-20">
+    <h2 class="font-display text-3xl text-bone mb-12">How we got here</h2>
+    <ol class="relative border-s border-line ms-3">
+      <li class="mb-12 ms-8">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-gold rounded-full -start-3 ring-4 ring-ink text-ink text-xs font-medium">21</span>
+        <h3 class="font-display text-lg text-bone">A study group, not a company</h3>
+        <p class="text-mist text-sm mt-2 leading-relaxed max-w-2xl">Three junior-to-mid engineers started meeting on Saturdays to help friends debug their side projects. Twelve people showed up to the fourth session.</p>
+      </li>
+      <li class="mb-12 ms-8">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-charcoal border border-line rounded-full -start-3 ring-4 ring-ink text-bone text-xs font-medium">22</span>
+        <h3 class="font-display text-lg text-bone">First structured cohort</h3>
+        <p class="text-mist text-sm mt-2 leading-relaxed max-w-2xl">The Saturday sessions became a scheduled eight-week program with actual project deadlines. Eighteen students finished the first cohort; eleven had job offers within four months.</p>
+      </li>
+      <li class="mb-12 ms-8">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-charcoal border border-line rounded-full -start-3 ring-4 ring-ink text-bone text-xs font-medium">23</span>
+        <h3 class="font-display text-lg text-bone">Backend &amp; Databases track opens</h3>
+        <p class="text-mist text-sm mt-2 leading-relaxed max-w-2xl">Alumni kept asking for something beyond frontend work, so we brought on a database engineer to build a second track around schema design and query performance.</p>
+      </li>
+      <li class="mb-12 ms-8">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-charcoal border border-line rounded-full -start-3 ring-4 ring-ink text-bone text-xs font-medium">25</span>
+        <h3 class="font-display text-lg text-bone">Cybersecurity Fundamentals, and a real mentor bench</h3>
+        <p class="text-mist text-sm mt-2 leading-relaxed max-w-2xl">The mentor pool passed 100 people. A third track launched, focused on access control and secure defaults rather than certification exam prep.</p>
+      </li>
+      <li class="ms-8">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-charcoal border border-line rounded-full -start-3 ring-4 ring-ink text-bone text-xs font-medium">26</span>
+        <h3 class="font-display text-lg text-bone">Cohort 14, today</h3>
+        <p class="text-mist text-sm mt-2 leading-relaxed max-w-2xl">Still the same core idea as the Saturday sessions: an engineer who's done the job, sitting across from you while you learn to do it.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= TEAM ================= -->
+  <section class="bg-charcoal border-y border-line">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-20">
+      <h2 class="font-display text-3xl text-bone mb-2">Who's behind the curriculum</h2>
+      <p class="text-mist mb-12 max-w-2xl">The founding three still teach — mentorship doesn't stop just because the org chart grew.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-line rounded-lg p-5 bg-ink">
+          <div class="aspect-square rounded-md bg-plum mb-4 flex items-center justify-center text-mist text-xs">Photo</div>
+          <p class="text-bone font-medium">Sana Malik</p>
+          <p class="text-mist text-sm">Co-founder, Frontend</p>
+        </div>
+        <div class="border border-line rounded-lg p-5 bg-ink">
+          <div class="aspect-square rounded-md bg-plum mb-4 flex items-center justify-center text-mist text-xs">Photo</div>
+          <p class="text-bone font-medium">Bilal Chaudhry</p>
+          <p class="text-mist text-sm">Co-founder, Backend &amp; Databases</p>
+        </div>
+        <div class="border border-line rounded-lg p-5 bg-ink">
+          <div class="aspect-square rounded-md bg-plum mb-4 flex items-center justify-center text-mist text-xs">Photo</div>
+          <p class="text-bone font-medium">Areeba Farooq</p>
+          <p class="text-mist text-sm">Co-founder, Security</p>
+        </div>
+        <div class="border border-line rounded-lg p-5 bg-ink">
+          <div class="aspect-square rounded-md bg-plum mb-4 flex items-center justify-center text-mist text-xs">Photo</div>
+          <p class="text-bone font-medium">Tariq Iqbal</p>
+          <p class="text-mist text-sm">Head of Mentor Operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="max-w-screen-xl mx-auto px-4 sm:px-6 py-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div>
+      <p class="font-display text-4xl text-gold">14</p>
+      <p class="text-sm text-mist mt-1">Cohorts run to date</p>
+    </div>
+    <div>
+      <p class="font-display text-4xl text-gold">3</p>
+      <p class="text-sm text-mist mt-1">Program tracks</p>
+    </div>
+    <div>
+      <p class="font-display text-4xl text-gold">4.8/5</p>
+      <p class="text-sm text-mist mt-1">Average mentor rating</p>
+    </div>
+    <div>
+      <p class="font-display text-4xl text-gold">2021</p>
+      <p class="text-sm text-mist mt-1">Founded in Lahore</p>
+    </div>
+  </section>
+
+  <!-- ================= VALUES ACCORDION ================= -->
+  <section class="bg-charcoal border-y border-line">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-20">
+      <h2 class="font-display text-3xl text-bone mb-10">What we hold mentors to</h2>
+      <div id="values-accordion" data-accordion="collapse" class="max-w-3xl">
+
+        <h3 id="values-heading-1">
+          <button type="button" class="flex items-center justify-between w-full py-5 text-left border-b border-line text-bone font-medium" data-accordion-target="#values-body-1" aria-expanded="true" aria-controls="values-body-1">
+            <span>Feedback has to be specific</span>
+            <svg data-accordion-icon class="w-4 h-4 shrink-0 text-mist" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h3>
+        <div id="values-body-1" class="hidden" aria-labelledby="values-heading-1">
+          <p class="pb-5 text-mist text-sm leading-relaxed">"Good job" isn't a review comment. Mentors point at the exact line and explain what a reviewer at their company would flag and why.</p>
+        </div>
+
+        <h3 id="values-heading-2">
+          <button type="button" class="flex items-center justify-between w-full py-5 text-left border-b border-line text-bone font-medium" data-accordion-target="#values-body-2" aria-expanded="false" aria-controls="values-body-2">
+            <span>Show up, or say so early</span>
+            <svg data-accordion-icon class="w-4 h-4 shrink-0 text-mist" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h3>
+        <div id="values-body-2" class="hidden" aria-labelledby="values-heading-2">
+          <p class="pb-5 text-mist text-sm leading-relaxed">Mentors volunteer their evenings. In exchange we ask for reliability — reschedule with notice rather than a no-show, same as any team would expect.</p>
+        </div>
+
+        <h3 id="values-heading-3">
+          <button type="button" class="flex items-center justify-between w-full py-5 text-left border-b border-line text-bone font-medium" data-accordion-target="#values-body-3" aria-expanded="false" aria-controls="values-body-3">
+            <span>No gatekeeping the basics</span>
+            <svg data-accordion-icon class="w-4 h-4 shrink-0 text-mist" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h3>
+        <div id="values-body-3" class="hidden" aria-labelledby="values-heading-3">
+          <p class="pb-5 text-mist text-sm leading-relaxed">There's no such thing as a "dumb question" in a session. If a student is stuck on something fundamental, that's a signal to slow down, not to move on.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-900 border-t border-line">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <a href="../../index.html" class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-full bg-gold text-ink font-display font-semibold flex items-center justify-center">N</span>
+          <span class="font-display text-xl text-bone">NEXORA</span>
+        </a>
+        <p class="text-mist text-sm mt-4 max-w-sm leading-relaxed">A mentor-led career program for computer science students, running out of Lahore since 2021.</p>
+      </div>
+      <div>
+        <p class="text-bone font-medium mb-4">Site</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="../../index.html" class="text-mist hover:text-gold">Home</a></li>
+          <li><a href="about.html" class="text-mist hover:text-gold">About</a></li>
+          <li><a href="contact.html" class="text-mist hover:text-gold">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-bone font-medium mb-4">Account</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="signup.html" class="text-mist hover:text-gold">Sign up</a></li>
+          <li><a href="signin.html" class="text-mist hover:text-gold">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-mist">
+        <p>© 2026 Nexora. All rights reserved.</p>
+        <p>Built for the Web Engineering assignment, Fall 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>

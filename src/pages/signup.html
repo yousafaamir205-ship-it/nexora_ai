@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — NEXORA</title>
+  <meta name="description" content="Create a NEXORA account to start your application." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#111827',
+            charcoal: '#1A1F2E',
+            plum: '#231B30',
+            gold: '#D9A253',
+            bone: '#F2EEE6',
+            mist: '#98A0B3',
+            line: '#2B3040',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['"IBM Plex Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css" rel="stylesheet" />
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-ink text-bone font-sans antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-40 bg-ink/90 backdrop-blur border-b border-line">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 sm:px-6 py-4">
+      <a href="../../index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-full bg-gold text-ink font-display font-semibold flex items-center justify-center">N</span>
+        <span class="font-display text-xl tracking-tight text-bone">NEXORA</span>
+      </a>
+
+      <div class="flex md:order-2 items-center gap-2">
+        <a href="signin.html" data-nav-link="signin.html" class="hidden sm:inline-block text-sm text-bone/80 hover:text-gold px-3 py-2">Sign In</a>
+        <a href="signup.html" data-nav-link="signup.html" class="text-sm font-medium bg-gold text-ink px-4 py-2 rounded-md hover:bg-gold/90 transition-colors">Sign Up</a>
+        <button data-collapse-toggle="navbar-main" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-bone/80 rounded-md md:hidden hover:bg-charcoal" aria-controls="navbar-main" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-main">
+        <ul class="flex flex-col md:flex-row md:items-center md:gap-8 mt-4 md:mt-0 font-medium">
+          <li><a href="../../index.html" data-nav-link="index.html" class="block py-2 text-bone/80 hover:text-gold">Home</a></li>
+          <li><a href="about.html" data-nav-link="about.html" class="block py-2 text-bone/80 hover:text-gold">About</a></li>
+          <li><a href="contact.html" data-nav-link="contact.html" class="block py-2 text-bone/80 hover:text-gold">Contact</a></li>
+          <li class="sm:hidden"><a href="signin.html" class="block py-2 text-bone/80 hover:text-gold">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="max-w-screen-xl mx-auto px-4 sm:px-6 py-16 md:py-20 grid lg:grid-cols-5 gap-12 items-start">
+
+    <!-- ================= SIDE PANEL ================= -->
+    <div class="lg:col-span-2 order-2 lg:order-1">
+      <div class="border border-line rounded-lg p-8 bg-charcoal">
+        <p class="font-display text-2xl text-bone">Cohort 14 is open</p>
+        <p class="text-mist text-sm mt-2 leading-relaxed">Create an account first — you can save an application and come back to it before the 3 October deadline.</p>
+        <div class="mt-6 space-y-4 text-sm">
+          <div class="flex justify-between border-b border-line pb-3">
+            <span class="text-mist">Application time</span>
+            <span class="text-bone">About 15 minutes</span>
+          </div>
+          <div class="flex justify-between border-b border-line pb-3">
+            <span class="text-mist">Decision by</span>
+            <span class="text-bone">10 October</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-mist">Program starts</span>
+            <span class="text-bone">20 October</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SIGN UP FORM ================= -->
+    <div class="lg:col-span-3 order-1 lg:order-2 max-w-lg">
+      <h1 class="font-display text-3xl md:text-4xl text-bone">Create your account</h1>
+      <p class="text-mist mt-3">Already applying? Pick up where you left off.</p>
+
+      <form id="signup-form" class="mt-8 space-y-5">
+        <div>
+          <label for="signup-name" class="block text-sm font-medium text-bone mb-2">Full name</label>
+          <input type="text" id="signup-name" name="name" required
+            class="w-full bg-charcoal border border-line rounded-md px-4 py-3 text-sm text-bone placeholder:text-mist focus:border-gold outline-none"
+            placeholder="Ayesha Khan" />
+        </div>
+
+        <div>
+          <label for="signup-email" class="block text-sm font-medium text-bone mb-2">Email address</label>
+          <input type="email" id="signup-email" name="email" required
+            class="w-full bg-charcoal border border-line rounded-md px-4 py-3 text-sm text-bone placeholder:text-mist focus:border-gold outline-none"
+            placeholder="you@example.com" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="signup-password" class="block text-sm font-medium text-bone mb-2">Password</label>
+            <input type="password" id="signup-password" name="password" required minlength="8"
+              class="w-full bg-charcoal border border-line rounded-md px-4 py-3 text-sm text-bone placeholder:text-mist focus:border-gold outline-none"
+              placeholder="At least 8 characters" />
+          </div>
+          <div>
+            <label for="signup-confirm" class="block text-sm font-medium text-bone mb-2">Confirm password</label>
+            <input type="password" id="signup-confirm" name="confirm_password" required minlength="8"
+              class="w-full bg-charcoal border border-line rounded-md px-4 py-3 text-sm text-bone placeholder:text-mist focus:border-gold outline-none"
+              placeholder="Type it again" />
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <input id="signup-terms" name="terms" type="checkbox" required
+            class="mt-1 w-4 h-4 rounded border-line bg-charcoal text-gold focus:ring-gold" />
+          <label for="signup-terms" class="text-sm text-mist">I agree to the <a href="#" class="link-grow text-bone">Terms of Service</a> and <a href="#" class="link-grow text-bone">Privacy Policy</a>.</label>
+        </div>
+
+        <button type="submit" class="w-full bg-gold text-ink font-medium px-6 py-3 rounded-md hover:bg-gold/90 transition-colors">Create account</button>
+        <p id="signup-note" class="hidden text-sm"></p>
+
+        <div class="flex items-center gap-4 py-2">
+          <div class="h-px bg-line flex-1"></div>
+          <span class="text-xs text-mist">or continue with</span>
+          <div class="h-px bg-line flex-1"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <button type="button" class="flex items-center justify-center gap-2 border border-line rounded-md px-4 py-3 text-sm text-bone hover:border-gold transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="currentColor" d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12s3.36-7.27 7.19-7.27c3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.19 2C6.42 2 2.03 6.8 2.03 12s4.39 10 10.16 10c5.05 0 9.81-3.55 9.81-10.13 0-.85-.09-1.4-.65-1.77z"/></svg>
+            Google
+          </button>
+          <button type="button" class="flex items-center justify-center gap-2 border border-line rounded-md px-4 py-3 text-sm text-bone hover:border-gold transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3z"/></svg>
+            GitHub
+          </button>
+        </div>
+      </form>
+
+      <p class="text-sm text-mist mt-6">Already have an account? <a href="signin.html" class="link-grow text-gold">Sign in.</a></p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-900 border-t border-line">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <a href="../../index.html" class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-full bg-gold text-ink font-display font-semibold flex items-center justify-center">N</span>
+          <span class="font-display text-xl text-bone">NEXORA</span>
+        </a>
+        <p class="text-mist text-sm mt-4 max-w-sm leading-relaxed">A mentor-led career program for computer science students, running out of Lahore since 2021.</p>
+      </div>
+      <div>
+        <p class="text-bone font-medium mb-4">Site</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="../../index.html" class="text-mist hover:text-gold">Home</a></li>
+          <li><a href="about.html" class="text-mist hover:text-gold">About</a></li>
+          <li><a href="contact.html" class="text-mist hover:text-gold">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-bone font-medium mb-4">Account</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="signup.html" class="text-mist hover:text-gold">Sign up</a></li>
+          <li><a href="signin.html" class="text-mist hover:text-gold">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-mist">
+        <p>© 2026 Nexora. All rights reserved.</p>
+        <p>Built for the Web Engineering assignment, Fall 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
